@@ -48,15 +48,21 @@ def product_of_all_other_numbers(arr):
     for i in range(n):  
         prod[i] = left[i] * right[i]  
         arr.append(prod[i])
-  
+    
  
     # for i in range(n):  
-    #     arr.append(prod[i])
-    return arr  
+    #     modified_arr = []
+    #     mid = n // 2 
+    #     arr[i] = modified_arr[mid - 1]
+
+     
+    mid = len(arr) // 2 
+      
+    return arr[mid:]
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
-    arr = [1, 2, 3, 4, 5]
+    arr = [1, 2]
     # arr = [2, 6, 9, 8, 2, 2, 9, 10, 7, 4, 7, 1, 9, 5, 9, 1, 8, 1, 8, 6, 2, 6, 4, 8, 9, 5, 4, 9, 10, 3, 9, 1, 9, 2, 6, 8, 5, 5, 4, 7, 7, 5, 8, 1, 6, 5, 1, 7, 7, 8]
 
     print(f"Output of product_of_all_other_numbers: {product_of_all_other_numbers(arr)}")
